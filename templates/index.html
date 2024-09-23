@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Monitoring System</title>
+</head>
+<body>
+    <h1>Attendance Monitoring System</h1>
+    
+    <button onclick="startRecognition()">Recognize Faces</button>
+    <br><br>
+
+    <div>
+        <img id="video" src="{{ url_for('video_feed') }}" width="720px">
+    </div>
+
+    <script>
+        function startRecognition() {
+            document.getElementById('video').src = "/video_feed";
+        }
+    </script>
+</body>
+</html>
